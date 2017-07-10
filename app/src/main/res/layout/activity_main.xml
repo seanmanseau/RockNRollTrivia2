@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    tools:context="com.example.android.rocknrolltrivia2.MainActivity">
+
+    <LinearLayout
+        android:id="@+id/activity_main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/questionBowie"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="8dp"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp"
+            android:background="#807986CB"
+            android:textSize="25sp"
+            android:textColor="@android:color/white"
+            android:text="Which of the following were David Bowie personas?"/>
+
+        <ImageView
+            android:src="@drawable/bowie"
+            android:layout_width="wrap_content"
+            android:layout_height="450dp"
+            android:scaleType="fitXY"
+            android:id="@+id/imageView" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <CheckBox
+                android:id="@+id/answerA"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#ffffff"
+                android:paddingRight="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginLeft="16dp"
+                android:paddingLeft="8dp"
+                android:text="Ziggy Stardust"
+                android:textSize="16sp"
+                android:onClick="ziggyCheckbox"/>
+
+            <CheckBox
+                android:id="@+id/answerB"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#ffffff"
+                android:paddingRight="8dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginLeft="16dp"
+                android:paddingLeft="8dp"
+                android:text="Thin White Duke"
+                android:textSize="16sp"
+                android:onClick="thinCheckbox"/>
+
+            <CheckBox
+                android:id="@+id/answerC"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#ffffff"
+                android:paddingRight="8dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginBottom="8dp"
+                android:layout_marginLeft="16dp"
+                android:paddingLeft="8dp"
+                android:text="Iggy Pop"
+                android:textSize="16sp"
+                android:onClick="iggyCheckbox"/>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/questionNico"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="8dp"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp"
+            android:background="#807986CB"
+            android:textSize="25sp"
+            android:textColor="@android:color/white"
+            android:text="What is this German chanteuse's name?"/>
+
+        <ImageView
+            android:src="@drawable/nico"
+            android:layout_width="wrap_content"
+            android:layout_height="450dp"
+            android:scaleType="fitXY" />
+
+        <RadioGroup
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RadioButton android:id="@+id/nico"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingRight="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:layout_marginLeft="16dp"
+                android:paddingLeft="8dp"
+                android:textSize="16sp"
+                android:text="Nico"
+                android:onClick="onRadioButtonClicked"/>
+
+            <RadioButton android:id="@+id/lola"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingRight="8dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginBottom="8dp"
+                android:layout_marginLeft="16dp"
+                android:paddingLeft="8dp"
+                android:textSize="16sp"
+                android:text="Lola"
+                android:onClick="onRadioButtonClicked"/>
+
+            <RadioButton android:id="@+id/brigitte"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingRight="8dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginBottom="8dp"
+                android:layout_marginLeft="16dp"
+                android:paddingLeft="8dp"
+                android:textSize="16sp"
+                android:text="Brigitte"
+                android:onClick="onRadioButtonClicked"/>
+
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/questionJohnny"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="8dp"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp"
+            android:background="#807986CB"
+            android:textSize="25sp"
+            android:textColor="@android:color/white"
+            android:text="Before he went solo, Johnny Thunders was in what band?"/>
+
+        <ImageView
+            android:src="@drawable/johnnythunders"
+            android:layout_width="wrap_content"
+            android:layout_height="450dp"
+            android:scaleType="fitXY" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="56dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:layout_marginTop="13dp"
+                android:layout_marginBottom="8dp"
+                android:layout_marginLeft="16dp"
+                android:textSize="16sp"
+                android:text="The New York "/>
+
+            <EditText
+                android:id="@+id/name_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="4dp"
+                android:layout_marginLeft="8dp"
+                android:textSize="16sp"
+                android:hint="enter last word here"
+                android:inputType="textCapWords" />
+
+            <Button
+                android:id="@+id/questionThree"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:text="Click Me"
+                android:onClick="thunders"/>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/questionPretenders"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="8dp"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp"
+            android:background="#807986CB"
+            android:textSize="25sp"
+            android:textColor="@android:color/white"
+            android:text="What was the name of the Pretenders' hit album released in 1984?"/>
+
+        <ImageView
+            android:src="@drawable/pretenders"
+            android:layout_width="wrap_content"
+            android:layout_height="450dp"
+            android:layout_centerInParent="true"
+            android:scaleType="fitXY" />
+
+        <RadioGroup
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RadioButton android:id="@+id/tattooed"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingRight="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:layout_marginLeft="16dp"
+                android:paddingLeft="8dp"
+                android:textSize="16sp"
+                android:text="Tattooed Love Boys"
+                android:onClick="onPretendersRadioButtonClicked"/>
+
+            <RadioButton android:id="@+id/crawl"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingRight="8dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginBottom="8dp"
+                android:layout_marginLeft="16dp"
+                android:paddingLeft="8dp"
+                android:textSize="16sp"
+                android:text="Learning to Crawl"
+                android:onClick="onPretendersRadioButtonClicked"/>
+
+            <RadioButton android:id="@+id/middle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingRight="8dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginBottom="8dp"
+                android:layout_marginLeft="16dp"
+                android:paddingLeft="8dp"
+                android:textSize="16sp"
+                android:text="Middle of the Road"
+                android:onClick="onPretendersRadioButtonClicked"/>
+
+        </RadioGroup>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <Button
+                android:id="@+id/submitScore"
+                android:layout_height="72dp"
+                android:layout_width="144dp"
+                android:layout_marginTop="24dp"
+                android:layout_marginBottom="24dp"
+                android:layout_centerInParent="true"
+                android:textSize="24sp"
+                android:text="How'd I do??"
+                android:onClick="getScore"/>
+        </RelativeLayout>
+
+    </LinearLayout>
+
+
+
+
+</ScrollView>
